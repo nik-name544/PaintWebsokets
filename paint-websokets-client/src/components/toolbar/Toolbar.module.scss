@@ -1,0 +1,89 @@
+@import "../../../styles/variables.scss";
+
+.wrapper {
+  height: $tb-h;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 4px 5px gray;
+  z-index: 5;
+}
+
+.btn,
+.btnActive {
+  height: 25px;
+  width: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.3s;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  &:hover {
+    background-color: lightgray;
+  }
+}
+
+.btnActive {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 22.5px;
+    height: 23px;
+    border: 2px solid red;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+  }
+  // border: 2px solid red;
+  // border-radius: 8px;
+}
+
+.brush,
+.square,
+.circle,
+.eraser,
+.arrowBack,
+.arrowForward,
+.save {
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  background-size: cover;
+  z-index: -1;
+}
+
+.colorPalete {
+  width: 25px;
+  height: 25px;
+}
+
+.arrowForward {
+  transform: scale(-1, 1);
+}
+
+.line {
+  width: 24px;
+  height: 3px;
+  background-color: #000;
+  transform: rotate(-39.39deg);
+  margin-top: 10px;
+}
+
+.toolbarWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.toolbarLeft,
+.toolbarRight {
+  display: flex;
+}

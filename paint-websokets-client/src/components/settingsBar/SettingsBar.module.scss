@@ -1,0 +1,16 @@
+@import "../../../styles/variables.scss";
+
+.wrapper {
+  height: $tb-h;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 4px 5px gray;
+  top: $tb-h;
+}
+
+.label {
+  margin: 0 10px;
+}
